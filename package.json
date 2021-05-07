@@ -1,0 +1,30 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "a chat application for twitch",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SahilUpadhye291998/TwitchBot.git"
+  },
+  "keywords": [
+    "Twitch",
+    "IBM",
+    "ChatBOT"
+  ],
+  "author": "xGod666",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SahilUpadhye291998/TwitchBot/issues"
+  },
+  "homepage": "https://github.com/SahilUpadhye291998/TwitchBot#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "ibm-watson": "^6.0.4",
+    "tmi.js": "^1.8.3"
+  }
+}
