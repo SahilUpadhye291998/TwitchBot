@@ -1,0 +1,570 @@
+{
+  "intents": [
+    {
+      "intent": "bye",
+      "examples": [
+        {
+          "text": "bye"
+        },
+        {
+          "text": "I need to go to work now"
+        },
+        {
+          "text": "i will be lurking"
+        },
+        {
+          "text": "see you soon"
+        },
+        {
+          "text": "signing off"
+        }
+      ],
+      "description": "Seeing off the user"
+    },
+    {
+      "intent": "greeting",
+      "examples": [
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Heyy. Nice to meet you"
+        },
+        {
+          "text": "Heyyyyy"
+        },
+        {
+          "text": "Hi"
+        },
+        {
+          "text": "How you doing"
+        },
+        {
+          "text": "Sup"
+        }
+      ],
+      "description": "Greeting to the user"
+    },
+    {
+      "intent": "negative",
+      "examples": [
+        {
+          "text": "i am facing some problem"
+        },
+        {
+          "text": "i am feeling down"
+        },
+        {
+          "text": "i am not feeling well"
+        },
+        {
+          "text": "i am sad"
+        },
+        {
+          "text": "i feel depressed"
+        },
+        {
+          "text": "not good"
+        },
+        {
+          "text": "not really very good"
+        }
+      ],
+      "description": "A sample response negative"
+    },
+    {
+      "intent": "positive",
+      "examples": [
+        {
+          "text": "good"
+        },
+        {
+          "text": "i am excited"
+        },
+        {
+          "text": "i am good"
+        },
+        {
+          "text": "i am happy"
+        },
+        {
+          "text": "I found a new job"
+        },
+        {
+          "text": "its going on"
+        }
+      ],
+      "description": "If the user gives positive response"
+    },
+    {
+      "intent": "tell_me_about",
+      "examples": [
+        {
+          "text": "define gravity",
+          "mentions": [
+            {
+              "entity": "object_of_interest",
+              "location": [
+                7,
+                14
+              ]
+            }
+          ]
+        },
+        {
+          "text": "explain like i am 5 what is a cake",
+          "mentions": [
+            {
+              "entity": "object_of_interest",
+              "location": [
+                30,
+                34
+              ]
+            }
+          ]
+        },
+        {
+          "text": "how big is space",
+          "mentions": [
+            {
+              "entity": "object_of_interest",
+              "location": [
+                11,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "text": "how is France",
+          "mentions": [
+            {
+              "entity": "object_of_interest",
+              "location": [
+                7,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "text": "how to get to India",
+          "mentions": [
+            {
+              "entity": "object_of_interest",
+              "location": [
+                14,
+                19
+              ]
+            }
+          ]
+        },
+        {
+          "text": "I want to know more about tesla",
+          "mentions": [
+            {
+              "entity": "object_of_interest",
+              "location": [
+                26,
+                31
+              ]
+            }
+          ]
+        },
+        {
+          "text": "tell me about Star War",
+          "mentions": [
+            {
+              "entity": "object_of_interest",
+              "location": [
+                14,
+                22
+              ]
+            }
+          ]
+        },
+        {
+          "text": "tell me about the company OpenAI",
+          "mentions": [
+            {
+              "entity": "object_of_interest",
+              "location": [
+                26,
+                32
+              ]
+            }
+          ]
+        },
+        {
+          "text": "what do you think of microsoft",
+          "mentions": [
+            {
+              "entity": "object_of_interest",
+              "location": [
+                21,
+                30
+              ]
+            }
+          ]
+        },
+        {
+          "text": "what is anime all about?",
+          "mentions": [
+            {
+              "entity": "object_of_interest",
+              "location": [
+                8,
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "text": "what is the definition of gravity",
+          "mentions": [
+            {
+              "entity": "object_of_interest",
+              "location": [
+                26,
+                33
+              ]
+            }
+          ]
+        },
+        {
+          "text": "whats a coconut?",
+          "mentions": [
+            {
+              "entity": "object_of_interest",
+              "location": [
+                8,
+                15
+              ]
+            }
+          ]
+        },
+        {
+          "text": "where is mercury",
+          "mentions": [
+            {
+              "entity": "object_of_interest",
+              "location": [
+                9,
+                16
+              ]
+            }
+          ]
+        }
+      ],
+      "description": "A simple intent to get the information from wikipedia"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "object_of_interest",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "cake",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "France",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "India",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "mercury",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "microsoft",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "OpenAI",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "space",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "tesla",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "webhooks": [
+    {
+      "url": "https://eu-gb.functions.appdomain.cloud/api/v1/web/shadowhokage666%40gmail.com_dev/default/Wikipedia-summary.json",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_9_1620400715545",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "positive",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Heyyy that's pretty nice to hear. Tell us more about it"
+              },
+              {
+                "text": "I am so happy for you"
+              },
+              {
+                "text": "YOOOOOO pretty sick ma man"
+              },
+              {
+                "text": "Hell ya brother"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#positive",
+      "dialog_node": "node_10_1620398596349",
+      "previous_sibling": "node_2_1620498919404"
+    },
+    {
+      "type": "standard",
+      "title": "object of interest",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "object_of_interest": "@object_of_interest"
+          },
+          "result_variable": "webhook_result_1"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#tell_me_about && @object_of_interest",
+      "dialog_node": "node_2_1620498919404",
+      "previous_sibling": "node_3_1620398150999"
+    },
+    {
+      "type": "standard",
+      "title": "greeting",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Heyy how are you doing today? Hope you are doing well."
+              },
+              {
+                "text": "Good morning."
+              },
+              {
+                "text": "Bon jour cava?"
+              },
+              {
+                "text": "Hello there"
+              },
+              {
+                "text": "Hi"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#greeting",
+      "dialog_node": "node_3_1620398150999",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "negative",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "oh no. What happened?"
+              },
+              {
+                "text": "Oh no. I am sorry man. What happened?"
+              },
+              {
+                "text": "What happened man? I hope you get well soon"
+              },
+              {
+                "text": "We are here, if you want to talk about it. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#negative",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_4_1620400018739",
+      "previous_sibling": "node_10_1620398596349"
+    },
+    {
+      "type": "standard",
+      "title": "bye",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Aww you leaving."
+              },
+              {
+                "text": "See you soon"
+              },
+              {
+                "text": "Bya bye ma friend"
+              },
+              {
+                "text": "aight catch you later"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#bye",
+      "dialog_node": "node_9_1620400715545",
+      "previous_sibling": "node_4_1620400018739"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "I am defining @object_of_interest <? $webhook_result_1.extract.extract.substring(0,$webhook_result_1.extract.extract.indexOf(\".\") ) ?>"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_2_1620498919404",
+      "conditions": "$webhook_result_1",
+      "dialog_node": "response_10_1620500864133"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "i didnt get any information on this"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_2_1620498919404",
+      "conditions": "anything_else",
+      "dialog_node": "response_5_1620500091952",
+      "previous_sibling": "response_10_1620500864133"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. How can I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "intent_classification": {
+      "training_backend_version": "v2"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "Twitch",
+  "language": "en",
+  "description": "A chat bot for chatting with the viewer on twitch or other application"
+}

@@ -1,0 +1,303 @@
+{
+  "intents": [
+    {
+      "intent": "bye",
+      "examples": [
+        {
+          "text": "bye"
+        },
+        {
+          "text": "I need to go to work now"
+        },
+        {
+          "text": "i will be lurking"
+        },
+        {
+          "text": "see you soon"
+        },
+        {
+          "text": "signing off"
+        }
+      ],
+      "description": "Seeing off the user"
+    },
+    {
+      "intent": "greeting",
+      "examples": [
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Heyy. Nice to meet you"
+        },
+        {
+          "text": "Heyyyyy"
+        },
+        {
+          "text": "Hi"
+        },
+        {
+          "text": "How you doing"
+        },
+        {
+          "text": "Sup"
+        }
+      ],
+      "description": "Greeting to the user"
+    },
+    {
+      "intent": "negative",
+      "examples": [
+        {
+          "text": "i am facing some problem"
+        },
+        {
+          "text": "i am feeling down"
+        },
+        {
+          "text": "i am not feeling well"
+        },
+        {
+          "text": "i am sad"
+        },
+        {
+          "text": "i feel depressed"
+        },
+        {
+          "text": "not good"
+        },
+        {
+          "text": "not really very good"
+        }
+      ],
+      "description": "A sample response negative"
+    },
+    {
+      "intent": "positive",
+      "examples": [
+        {
+          "text": "good"
+        },
+        {
+          "text": "i am excited"
+        },
+        {
+          "text": "i am good"
+        },
+        {
+          "text": "i am happy"
+        },
+        {
+          "text": "I found a new job"
+        },
+        {
+          "text": "its going on"
+        }
+      ],
+      "description": "If the user gives positive response"
+    }
+  ],
+  "entities": [],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_9_1620400715545",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "positive",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Heyyy that's pretty nice to hear. Tell us more about it"
+              },
+              {
+                "text": "I am so happy for you"
+              },
+              {
+                "text": "YOOOOOO pretty sick ma man"
+              },
+              {
+                "text": "Hell ya brother"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#positive",
+      "dialog_node": "node_10_1620398596349",
+      "previous_sibling": "node_3_1620398150999"
+    },
+    {
+      "type": "standard",
+      "title": "greeting",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Heyy how are you doing today? Hope you are doing well."
+              },
+              {
+                "text": "Good morning."
+              },
+              {
+                "text": "Bon jour cava?"
+              },
+              {
+                "text": "Hello there"
+              },
+              {
+                "text": "Hi"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#greeting",
+      "dialog_node": "node_3_1620398150999",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "negative",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "oh no. What happened?"
+              },
+              {
+                "text": "Oh no. I am sorry man. What happened?"
+              },
+              {
+                "text": "What happened man? I hope you get well soon"
+              },
+              {
+                "text": "We are here, if you want to talk about it. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#negative",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_4_1620400018739",
+      "previous_sibling": "node_10_1620398596349"
+    },
+    {
+      "type": "standard",
+      "title": "bye",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Aww you leaving."
+              },
+              {
+                "text": "See you soon"
+              },
+              {
+                "text": "Bya bye ma friend"
+              },
+              {
+                "text": "aight catch you later"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#bye",
+      "dialog_node": "node_9_1620400715545",
+      "previous_sibling": "node_4_1620400018739"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. How can I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "intent_classification": {
+      "training_backend_version": "v2"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "Twitch",
+  "language": "en",
+  "description": "A chat bot for chatting with the viewer on twitch or other application"
+}
